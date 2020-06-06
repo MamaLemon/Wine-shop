@@ -1,0 +1,20 @@
+<%@ page import="java.util.*" %>
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+    <h1>
+        Available Brands
+    </h1>
+    <%
+        List result = (List) request.getAttribute("brands");
+        Iterator iterator = result.iterator();
+
+        out.println("<br>We have <br><br>");
+        while(iterator.hasNext()){
+            out.println(iterator.next() + "<br>");
+        }
+    %>
+</center>
+</body>
+</html>
